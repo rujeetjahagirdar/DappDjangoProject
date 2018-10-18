@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Django Dapp</title>
+</head>
+<body>
+	<form action="/result/" method="post"> {% csrf_token %}
+		<label>Enter Index of Account:</label>
+		<input type="text" name="accountIndex">
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
