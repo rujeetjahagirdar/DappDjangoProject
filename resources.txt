@@ -5,3 +5,6 @@ https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-gu
 https://www.innoplexus.com/blog/how-to-develop-ethereum-contract-using-python-flask/
 https://github.com/gnosis/django-eth
 https://github.com/gnosis/django-eth-events
+
+https://medium.com/@timmykko/a-quick-glance-of-django-for-beginners-688bc6630fab
+https://medium.com/@djstein

@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<table class="table">
+	<th>
+		<tr>
+			<td><b>Account:</b></td>
+			<td><b>Balance(Ether):</b></td>
+		</tr>
+	</th>
+	<tbody>
+		{% for i,v in ans.items %}
+		<tr>
+			<td>{{i}}</td>
+			<td>{{v}}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+
+{# {{ans}} #}

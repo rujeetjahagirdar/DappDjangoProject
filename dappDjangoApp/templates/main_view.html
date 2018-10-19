@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<title>First Django Dapp</title>
 </head>
 <body>
-	<form action="/result/" method="post"> {% csrf_token %}
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+				<li><a href="allAccounts/">All Accounts</a></li>
+				<li><a href="transfer/">Transfer</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!--<form action="/result/" method="post"> {% csrf_token %}
 		<label>Enter Index of Account:</label>
 		<input type="text" name="accountIndex">
 		<input type="submit" value="Show">
-	</form>
+	</form>-->
 </body>
 </html>

@@ -1,0 +1,9 @@
+<form action="/resultTransfer/" method="post"> {% csrf_token %}
+	<label>From Address:</label>
+	<input type="text" name="fromAccount">
+	<label>To Address:</label>
+	<input type="text" name="toAddress">
+	<label>Amount:</label>
+	<input type="text" name="amount">
+	<input type="submit" value="Transfer">
+</form>
