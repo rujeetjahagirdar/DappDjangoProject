@@ -1,0 +1,7 @@
+https://web3py.readthedocs.io/en/stable/examples.html#looking-up-blocks
+https://dominikharz.me/blockchain/2017/02/14/ethereum-python-integration.html
+https://medium.com/coinmonks/build-a-dapp-using-ethereum-and-angular-6-a404fbf3c08d
+https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988
+https://www.innoplexus.com/blog/how-to-develop-ethereum-contract-using-python-flask/
+https://github.com/gnosis/django-eth
+https://github.com/gnosis/django-eth-events
