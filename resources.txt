@@ -8,3 +8,31 @@ https://github.com/gnosis/django-eth-events
 
 https://medium.com/@timmykko/a-quick-glance-of-django-for-beginners-688bc6630fab
 https://medium.com/@djstein
+
+
+from web3 import Web3, HTTPProvider
+from solc import compile_files
+
+web3=Web3(HTTPProvider('http://127.0.0.1:7545'))
+compile_sol = compile_files(["/home/rujeet/Desktop/DappDjangoProject/Payments.sol"])
+contract_interface = compile_sol['/home/rujeet/Desktop/DappDjangoProject/Payments.sol:Payments']
+MyContractClass=web3.eth.contract(abi=contract_interface['abi'],bytecode=contract_interface['bin'])
+tx_hash = MyContractClass.deploy(transaction = {'from':web3.eth.accounts[1]})
+tx_receipt = web3.eth.getTransactionReceipt(tx_hash)
+tx_receipt['contractAddress']
+con = web3.eth.contract(address=tx_receipt.contractAddress,abi=contract_interface['abi'])
+
+
+con.functions.getBalance('0xa443562bED02Cec5862EDC9fd0299FEA60b72a91').call()
+
+//con.functions.toContract(100000000000000).transact({'from':'0xe4Ed8DF8dfC920C498cDBf9b7B18956b91A72f0B'})
+
+con.functions.toContract(20000000000000000000).transact({'from':'0xe4Ed8DF8dfC920C498cDBf9b7B18956b91A72f0B','value':20000000000000000000})
+con.functions.getBalance('fromAccountAddress').call()
+con.functions.getBalance('contractAddress').call()
+
+//con.functions.toAccount('receiverAddress',19999999999999998000).transact({'from':'fromAccountAddress'})
+
+con.functions.toAccount('0xe4Ed8DF8dfC920C498cDBf9b7B18956b91A72f0B').transact({'from':'0xa443562bED02Cec5862EDC9fd0299FEA60b72a91'})
+
+contractAddress=0x13d13DE8a4Dd472C88e2A81dCeAc18c4cb0D8f3E
